@@ -3,6 +3,60 @@
 }
 
 body {
-    background-color:#fdfaf8 ;
-    color: #3a2a32;
+  margin: 0;
+  background-color: #fdfaf8;
+  color: #3a2a32;
+}
+
+.divisor {
+  width: 50px;
+  height: 1.5px;
+  background: #c49a6c;
+  margin-top: 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Cormorant-Garamond", serif;
+  font-weight: 500;
+  line-height: 1.15;
+  color: #5c2140;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* seção sobre */
+.sobre {
+}
+
+/* seção tratamento */
+.tratamentos {
+  background-color: #f4e8e6;
+}
+.tratamento-destaque {
+}
+.tratamento-simples {
+}
+
+/* seção clube luna */
+.clube-luna {
+  background-color: #5c2140;
+  color: #f6ebe8;
+}
+
+.h2-claro {
+  color: #f6ebe8;
+}
+
+.h3-claro {
+  color: #e4ad7d;
+}
+
+/* seção contato */
+.contato {
+  background-color: #f4e8e6;
 }
