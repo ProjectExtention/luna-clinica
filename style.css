@@ -260,9 +260,47 @@ header.scrolled {
   padding: clamp(40px, 6vw, 72px) var(--lateral);
 }
 
-.tratamento-destaque {
+.tratamentos-grade {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 40px;
 }
+
+.tratamento-destaque {
+  grid-column: span 2;
+  background: var(--vinho);
+  color: #fff;
+  padding: 36px 40px;
+  border-radius: 6px;
+}
+
+.tratamento-destaque h3 {
+  color: #fff;
+  font-size: 1.9rem;
+}
+
 .tratamento-simples {
+  background: var(--papel);
+  padding: 28px 30px;
+  border-radius: 6px;
+}
+
+.tratamento-simples h3 {
+  font-size: 1.4rem;
+}
+
+.tratamento-destaque,
+.tratamento-simples {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.tratamento-destaque:hover,
+.tratamento-simples:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(92, 33, 64, 0.18);
 }
 
 /* seção clube luna */
