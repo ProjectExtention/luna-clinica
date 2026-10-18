@@ -247,12 +247,19 @@ header.scrolled {
 
 /* seção sobre */
 .sobre {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(32px, 6vw, 96px);
+  align-items: start;
+  padding: clamp(40px, 6vw, 72px) var(--lateral);
 }
 
 /* seção tratamento */
 .tratamentos {
   background-color: var(--rosa);
+  padding: clamp(40px, 6vw, 72px) var(--lateral);
 }
+
 .tratamento-destaque {
 }
 .tratamento-simples {
@@ -262,6 +269,7 @@ header.scrolled {
 .clube-luna {
   background-color: var(--vinho);
   color: var(--papel);
+  padding: clamp(40px, 6vw, 72px) var(--lateral);
 }
 
 .h2-claro {
@@ -275,6 +283,7 @@ header.scrolled {
 /* seção contato */
 .contato {
   background-color: #f4e8e6;
+  padding: clamp(40px, 6vw, 72px) var(--lateral);
 }
 
 /* footer */
