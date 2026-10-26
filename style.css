@@ -69,12 +69,15 @@ header {
   padding: 14px var(--lateral);
   transition:
     background 0.3s,
-    box-shadow 0.3s;
+    box-shadow 0.3s,
+    backdrop-filter 0.3s;
 }
 
 header.scrolled {
-  background: var(--papel);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: rgba(253, 250, 248, 0.75);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  backdrop-filter: blur(12px) saturate(140%);
+  box-shadow: 0 2px 12px rgba(63, 20, 41, 0.08);
 }
 
 .marca {
@@ -421,10 +424,14 @@ header.scrolled {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   gap: 12px;
   padding-top: 24px;
   font-size: 0.85rem;
   opacity: 0.75;
+}
+.footer-base p {
+  margin: 0;
 }
 .footer-base a {
   color: inherit;
