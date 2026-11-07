@@ -257,6 +257,13 @@ header.scrolled {
   padding: clamp(40px, 6vw, 72px) var(--lateral);
 }
 
+.sobre-imagem {
+  img {
+    width: 500px;
+    height: auto;
+  }
+}
+
 /* seção tratamento */
 .tratamentos {
   background-color: var(--rosa);
