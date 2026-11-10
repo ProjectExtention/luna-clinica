@@ -315,23 +315,179 @@ header.scrolled {
 
 /* seção clube luna */
 .clube-luna {
-  background-color: var(--vinho);
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(48px, 8vw, 120px);
+
+  background: linear-gradient(
+    115deg,
+    var(--vinho-esc),
+    var(--vinho)
+  );
+
   color: var(--papel);
-  padding: clamp(40px, 6vw, 72px) var(--lateral);
+  padding: clamp(56px, 7vw, 88px) var(--lateral);
+}
+
+.clube-intro {
+  display: flex;
+  flex-direction: column;
+  min-height: 440px;
 }
 
 .h2-claro {
-  color: #f6ebe8;
+  color: var(--papel);
+  margin: 0;
 }
 
 .h3-claro {
-  color: #e4ad7d;
+  color: var(--dourado);
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 400;
+  margin: 20px 0 0;
+}
+
+.clube-marcas {
+  margin-top: auto;
+}
+
+.clube-marcas p {
+  color: var(--papel);
+  font-family: var(--sans);
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.clube-marcas img {
+  max-width: 120px;
+  max-height: 65px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 20px 20px 0 0;
+}
+
+.clube-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.clube-descricao {
+  color: var(--papel);
+  font-size: 1.1rem;
+  line-height: 1.65;
+  margin: 0 0 32px;
+}
+
+.clube-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px;
+  width: 100%;
+}
+
+.clube-lista li {
+  position: relative;
+  padding: 17px 0 17px 26px;
+
+  color: var(--papel);
+  font-size: 1.05rem;
+
+  border-bottom: 1px solid rgba(253, 250, 248, 0.22);
+}
+
+.clube-lista li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  width: 9px;
+  height: 9px;
+
+  background: var(--dourado);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.clube-btn {
+  padding: 17px 34px;
+  box-shadow: none;
+}
+
+.clube-btn:hover {
+  background: #fff;
+  color: var(--vinho);
+  transform: translateY(-2px);
 }
 
 /* seção contato */
 .contato {
-  background-color: #f4e8e6;
-  padding: clamp(40px, 6vw, 72px) var(--lateral);
+  background-color: var(--rosa);
+  padding: clamp(56px, 8vw, 100px) var(--lateral);
+}
+
+.contato h2 {
+  margin-top: 0;
+  margin-bottom: 48px;
+}
+
+.contato-grade {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card-contato {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--papel);
+  border-top: 3px solid var(--dourado);
+  border-radius: 5px;
+
+  padding: 32px 34px;
+  min-height: 220px;
+}
+
+.card-contato h3 {
+  margin: 0 0 14px;
+  font-size: 1.5rem;
+}
+
+.card-contato p {
+  margin: 0 0 4px;
+  line-height: 1.65;
+}
+
+.contato-observacao {
+  color: #786b70;
+  font-size: 0.95rem;
+  margin-top: 12px !important;
+}
+
+/* Links dos cards */
+.botao-sublinhado {
+  display: inline-block;
+  width: fit-content;
+
+  color: var(--vinho);
+  font-weight: 500;
+
+  text-decoration: underline;
+  text-decoration-color: var(--dourado);
+  text-underline-offset: 6px;
+
+  margin-top: auto;
+  padding-top: 30px;
+
+  transition: color 0.2s ease;
+}
+
+.botao-sublinhado:hover {
+  color: var(--dourado);
 }
 
 /* footer */
