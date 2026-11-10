@@ -328,6 +328,40 @@ header.scrolled {
   color: #e4ad7d;
 }
 
+/* seção de urgência */
+.urgencia {
+  display: grid;
+  place-items: center;
+  min-height: 320px;
+  padding: clamp(48px, 8vw, 80px) var(--lateral);
+  background: var(--papel);
+}
+
+.urgencia-card {
+  box-sizing: border-box;
+  width: min(100%, 595px);
+  padding: clamp(32px, 5vw, 46px) clamp(24px, 6vw, 40px);
+  border: 1px solid #e8ddd3;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.55);
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(63, 20, 41, 0.04);
+}
+
+.urgencia-card h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.0rem);
+}
+
+.urgencia-card h2::after {
+  margin: 14px auto 0;
+}
+
+.urgencia-card p {
+  margin: 12px 0 22px;
+  font-size: 0.95rem;
+}
+
 /* seção contato */
 .contato {
   background-color: #f4e8e6;
