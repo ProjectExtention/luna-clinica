@@ -375,15 +375,15 @@ header {
   aspect-ratio: 5 / 4;
   overflow: hidden;
   border-radius: 5px;
+}
 
-  img {
-    position: absolute;
-    width: 173%;
-    max-width: none;
-    height: auto;
-    left: -73%;
-    top: -190%;
-  }
+.sobre-imagem img {
+  position: absolute;
+  width: 173%;
+  max-width: none;
+  height: auto;
+  left: -73%; 
+  top: -190%;
 }
 
 /* seção tratamento */
