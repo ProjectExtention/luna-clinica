@@ -37,15 +37,12 @@
         />
         <small>Clínica de Especialidades</small></a
       >
-      <button
-        class="menu-btn"
-        id="menuBtn"
-        aria-expanded="false"
-        aria-controls="nav"
-        aria-label="Abrir menu"
-      >
+      <a class="menu-btn menu-abrir" href="#nav" aria-label="Abrir menu">
         <span></span><span></span>
-      </button>
+      </a>
+      <a class="menu-btn menu-fechar" href="#fechar" aria-label="Fechar menu">
+        <span></span><span></span>
+      </a>
       <nav id="nav" class="nav">
         <a href="#sobre">A Luna</a>
         <a href="#tratamentos">Tratamentos</a>
@@ -295,7 +292,7 @@
     <footer class="footer">
       <div class="footer-grade">
         <div class="footer-sobre">
-          <a class="footer-marca" href="#inicio">
+          <a class="footer-marca" href="#">
             <img
               src="/assets/logo-luna-branca.png"
               alt="Logo da Luna"
@@ -357,40 +354,7 @@
       </div>
       <div class="footer-base">
         <p>© <span id="ano">2026</span> Luna Clínica de Especialidades</p>
-        <a href="#">Voltar ao topo ↑</a>
       </div>
     </footer>
-
-    <script>
-      const topo = document.getElementById("topo");
-      const atualizarTopo = () =>
-        topo.classList.toggle("scrolled", window.scrollY > 10);
-      window.addEventListener("scroll", atualizarTopo, { passive: true });
-      atualizarTopo();
-
-      // menu mobile
-      const menuBtn = document.getElementById("menuBtn");
-      const nav = document.getElementById("nav");
-      const definirMenu = (aberto) => {
-        nav.classList.toggle("aberto", aberto);
-        topo.classList.toggle("menu-aberto", aberto);
-        menuBtn.setAttribute("aria-expanded", aberto);
-        menuBtn.setAttribute(
-          "aria-label",
-          aberto ? "Fechar menu" : "Abrir menu",
-        );
-      };
-      menuBtn.addEventListener("click", () =>
-        definirMenu(!nav.classList.contains("aberto")),
-      );
-      nav
-        .querySelectorAll("a")
-        .forEach((link) =>
-          link.addEventListener("click", () => definirMenu(false)),
-        );
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") definirMenu(false);
-      });
-    </script>
   </body>
 </html>
