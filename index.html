@@ -1,292 +1,396 @@
 <!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
-    rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="style.css" />
-  <title>
-    Luna Clínica de Especialidades | Odontologia e Bem-Estar em Rio Preto
-  </title>
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <title>
+      Luna Clínica de Especialidades | Odontologia e Bem-Estar em Rio Preto
+    </title>
+  </head>
 
-<body>
-  <header class="topo" id="topo">
-    <a class="marca" href="#" aria-label="Luna, início">
-      <img src="/assets/logo-luna2.png" alt="Logo da Luna" style="width: 140px; height: auto;" />
-      <small>Clínica de Especialidades</small></a>
-    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">
-      <span></span><span></span>
-    </button>
-    <nav id="nav" class="nav">
-      <a href="#sobre">A Luna</a>
-      <a href="#tratamentos">Tratamentos</a>
-      <a href="#clube-luna">Clube Luna</a>
-      <a href="#urgencia">Urgência</a>
-      <a href="#contato">Contato</a>
-      <a class="btn btn-sm"
-        href="https://wa.me/5517992361717?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20na%20Luna."
-        target="_blank" rel="noopener">
-        Agende sua consulta
-      </a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero" id="hero">
-      <div class="lua" aria-hidden="true"></div>
-      <div class="hero-txt">
-        <p class="olho">Odontologia · Bem-estar · Rio Preto</p>
-        <h1>A saúde começa pela boca. O cuidado vai além.</h1>
-        <p>
-          Odontologia que preserva seus dentes e experiências de bem-estar
-          pensadas para quem coloca a própria saúde em primeiro lugar.
-        </p>
-        <div class="acoes">
-          <a class="btn"
-            href="https://wa.me/5517992361717?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20na%20Luna."
-            target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
-          <a class="link" href="#tratamentos">Ver tratamentos</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="sobre" id="sobre">
-      <div class="sobre-imagem">
-        <img src="/assets/dra-lueimy.png" alt="Dra. Lueimy" class="">
-      </div>
-      <div class="sobre-texto">
-        <h2>
-          Uma história que começou com o cuidado com o sorriso
-        </h2>
-        <p>
-          A Luna nasceu da dedicação da Dra. Lueimy à endodontia. Com foco na preservação dos dentes naturais e no
-          cuidado preciso, conquistou a confiança de pacientes que recomendam nosso trabalho a quem amam.
-        </p>
-        <p>
-          Com o tempo, ampliou suas especialidades, integrando odontologia preventiva, estética, massoterapia e cuidados
-          pós-operatórios.
-        </p>
-        <p>
-          Na Luna, cuidamos de você por inteiro: do sorriso ao bem-estar, com acolhimento, atenção individualizada e uma
-          relação de confiança construída ao longo do tempo.
-        </p>
-      </div>
-    </section>
-
-    <section class="tratamentos" id="tratamentos">
-      <h2>Tratamentos odontológicos</h2>
-      <div class="tratamentos-grade">
-        <article class="tratamento-destaque">
-          <h3>Endodontia</h3>
-          <p>
-            Tratamento de canal com a experiência da Dra. Lueimy, para salvar o
-            dente natural com conforto e precisão. Nossa origem e nossa
-            referência.
-          </p>
-        </article>
-        <article class="tratamento-destaque">
-          <h3>Porcelanas e estética</h3>
-          <p>
-            Facetas e restaurações em porcelana, planejadas caso a caso para um
-            sorriso harmônico, natural e duradouro.
-          </p>
-        </article>
-        <article class="tratamento-simples">
-          <h3>Prevenção e limpeza</h3>
-          <p>
-            Check-ups e profilaxia para cuidar hoje e evitar tratamentos maiores
-            amanhã.
-          </p>
-        </article>
-        <article class="tratamento-simples">
-          <h3>Clínica geral</h3>
-          <p>
-            Avaliação completa e tratamento das necessidades do dia a dia, com
-            plano individual.
-          </p>
-        </article>
-        <article class="tratamento-simples">
-          <h3>Implantes</h3>
-          <p>
-            Reposição de dentes com planejamento individual, para recuperar
-            função e confiança ao sorrir.
-          </p>
-        </article>
-        <article class="tratamento-simples">
-          <h3>Coroas e próteses</h3>
-          <p>Reabilitação para devolver função e aparência natural.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="clube-luna" id="clube-luna">
-
-      <!-- Coluna esquerda -->
-      <div class="clube-intro">
-
-        <h2 class="h2-claro">Clube Luna</h2>
-
-        <h3 class="h3-claro">
-          Um espaço para a mulher que se cuida.
-        </h3>
-
-        <div class="clube-marcas">
-
-          <img src="/assets/marca1.png" alt="Marca1">
-          <img src="/assets/marca2.png" alt="Marca2">
-          <img src="/assets/marca3.png" alt="Marca3">
-
-        </div>
-
-      </div>
-
-      <div class="clube-conteudo">
-
-        <p class="clube-descricao">
-          Estamos criando experiências que unem saúde e descanso:
-          massoterapia e spa, muay thai no período da noite,
-          encontros e momentos de relaxamento.
-        </p>
-
-        <ul class="clube-lista">
-          <li>Massoterapia e spa</li>
-          <li>Muay thai noturno</li>
-          <li>Encontros e experiências</li>
-        </ul>
-
-        <a href="https://wa.me/5517992361717?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Clube%20Luna."
-          target="_blank" rel="noopener noreferrer" class="btn btn-claro clube-btn">
-          Quero saber mais
-        </a>
-
-      </div>
-
-    </section>
-
-    <section class="urgencia" id="urgencia">
-      <article class="urgencia-card">
-        <h2>Dor de dente? Atendemos 24 horas.</h2>
-        <p>
-          Para emergências odontológicas, fale com a gente agora pelo WhatsApp.
-        </p>
-        <a class="btn" href="https://wa.me/5517992361717" target="_blank" rel="noopener">Chamar para urgência</a>
-      </article>
-    </section>
-
-    <section class="contato" id="contato">
-
-      <h2>Como chegar e falar com a Luna</h2>
-
-      <div class="contato-grade">
-
-        <article class="card-contato">
-          <h3>Endereço</h3>
-
-          <p>Rua Siqueira Campos, 1738</p>
-          <p>São José do Rio Preto, SP</p>
-
-          <a href="https://www.google.com/maps/search/?api=1&query=Rua+Siqueira+Campos+1738+São+José+do+Rio+Preto"
-            target="_blank" rel="noopener noreferrer" class="botao-sublinhado">
-            Abrir no mapa
-          </a>
-        </article>
-
-        <article class="card-contato">
-          <h3>Recepção</h3>
-
-          <p>Segunda à sexta</p>
-          <p>8h30 às 12h e 14h às 18h30</p>
-
-          <p class="contato-observacao">
-            Atendimentos clínicos com horário marcado,
-            normalmente até as 20h.
-          </p>
-        </article>
-
-        <article class="card-contato">
-          <h3>WhatsApp</h3>
-
-          <p>(17) 99236-1717</p>
-
-          <a href="https://wa.me/5517992361717" target="_blank" rel="noopener noreferrer" class="botao-sublinhado">
-            Iniciar conversa
-          </a>
-        </article>
-
-      </div>
-
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-grade">
-      <div class="footer-sobre">
-        <a class="footer-marca" href="#inicio">
-          <img src="/assets/logo-luna-branca.png" alt="Logo da Luna" style="width: 140px; height: auto;" />
-          <small>Clínica de Especialidades</small>
-        </a>
-        <p>
-          Odontologia conservadora e experiências de bem-estar em São José do
-          Rio Preto.
-        </p>
-        <a class="btn btn-claro btn-sm"
+  <body>
+    <header class="topo" id="topo">
+      <a class="marca" href="#" aria-label="Luna, início">
+        <img
+          src="/assets/logo-luna2.png"
+          alt="Logo da Luna"
+          style="width: 140px; height: auto"
+        />
+        <small>Clínica de Especialidades</small></a
+      >
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        aria-expanded="false"
+        aria-controls="nav"
+        aria-label="Abrir menu"
+      >
+        <span></span><span></span>
+      </button>
+      <nav id="nav" class="nav">
+        <a href="#sobre">A Luna</a>
+        <a href="#tratamentos">Tratamentos</a>
+        <a href="#clube-luna">Clube Luna</a>
+        <a href="#urgencia">Urgência</a>
+        <a href="#contato">Contato</a>
+        <a
+          class="btn btn-sm"
           href="https://wa.me/5517992361717?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20na%20Luna."
-          target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
-      </div>
-      <nav class="footer-col" aria-label="Rodapé">
-        <h3>Navegue</h3>
-        <ul>
-          <li><a href="#sobre">A Luna</a></li>
-          <li><a href="#tratamentos">Tratamentos</a></li>
-          <li><a href="#clube">Clube Luna</a></li>
-          <li><a href="#urgencia">Urgência</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
+          target="_blank"
+          rel="noopener"
+        >
+          Agende sua consulta
+        </a>
       </nav>
-      <div class="footer-col">
-        <h3>Visite</h3>
-        <ul>
-          <li>Rua Siqueira Campos, 1738<br />São José do Rio Preto, SP</li>
-          <li>
-            <a href="https://www.google.com/maps/search/?api=1&query=Rua+Siqueira+Campos+1738+S%C3%A3o+Jos%C3%A9+do+Rio+Preto"
-              target="_blank" rel="noopener">Abrir no mapa</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>Atendimento</h3>
-        <ul>
-          <li>Seg. à sex. · 8h30–12h e 14h–18h30</li>
-          <li>
-            <a href="https://wa.me/5517992361717" target="_blank" rel="noopener">(17) 99236-1717</a>
-          </li>
-          <li class="footer-24h">Urgências odontológicas 24h</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-base">
-      <p>© <span id="ano">2026</span> Luna Clínica de Especialidades</p>
-      <a href="#">Voltar ao topo ↑</a>
-    </div>
-  </footer>
+    </header>
 
-  <script>
-    const topo = document.getElementById("topo");
-    const atualizarTopo = () =>
-      topo.classList.toggle("scrolled", window.scrollY > 10);
-    window.addEventListener("scroll", atualizarTopo, { passive: true });
-    atualizarTopo();
-  </script>
-</body>
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-txt">
+          <p class="olho">Odontologia · Bem-estar · Rio Preto</p>
+          <h1>A saúde começa pela boca. O cuidado vai além.</h1>
+          <p class="hero-desc">
+            Odontologia que preserva seus dentes e experiências de bem-estar
+            pensadas para quem coloca a própria saúde em primeiro lugar.
+          </p>
+          <div class="acoes">
+            <a
+              class="btn"
+              href="https://wa.me/5517992361717?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20na%20Luna."
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="ri-whatsapp-line icon"></i>
+              Agendar pelo WhatsApp</a
+            >
+            <a class="link" href="#tratamentos"
+              >Ver tratamentos <i class="ri-arrow-right-line"></i
+            ></a>
+          </div>
+        </div>
 
+        <div class="hero-visual" aria-hidden="true">
+          <div class="lua"></div>
+          <img class="hero-foto" src="/assets/dra-lueimy.png" alt="" />
+        </div>
+
+        <svg
+          class="hero-onda"
+          viewBox="0 0 1440 160"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path
+            class="onda-fundo"
+            d="M0 150 C 260 60, 560 50, 820 125 C 1060 190, 1260 90, 1440 40 L 1440 160 L 0 160 Z"
+          />
+          <path class="onda-linha" d="M0 150 C 260 60, 560 50, 820 125" />
+        </svg>
+
+        <a
+          class="hero-seta"
+          href="#sobre"
+          aria-label="Rolar para a próxima seção"
+        >
+          <i class="ri-arrow-down-s-line"></i>
+        </a>
+      </section>
+
+      <section class="sobre" id="sobre">
+        <div class="sobre-imagem">
+          <img
+            src="/assets/fachada.png"
+            alt="Fachada da Luna Clínica de Especialidades ao entardecer"
+            loading="lazy"
+          />
+        </div>
+        <div class="sobre-texto">
+          <h2>Uma história que começou com o cuidado com o sorriso</h2>
+          <p>
+            A Luna nasceu da dedicação da Dra. Lueimy à endodontia. Com foco na
+            preservação dos dentes naturais e no cuidado preciso, conquistou a
+            confiança de pacientes que recomendam nosso trabalho a quem amam.
+          </p>
+          <p>
+            Com o tempo, ampliou suas especialidades, integrando odontologia
+            preventiva, estética, massoterapia e cuidados pós-operatórios.
+          </p>
+          <p>
+            Na Luna, cuidamos de você por inteiro: do sorriso ao bem-estar, com
+            acolhimento, atenção individualizada e uma relação de confiança
+            construída ao longo do tempo.
+          </p>
+        </div>
+      </section>
+
+      <section class="tratamentos" id="tratamentos">
+        <h2>Tratamentos odontológicos</h2>
+        <div class="tratamentos-grade">
+          <article class="tratamento-destaque">
+            <h3>Endodontia</h3>
+            <p>
+              Tratamento de canal com a experiência da Dra. Lueimy, para salvar
+              o dente natural com conforto e precisão. Nossa origem e nossa
+              referência.
+            </p>
+          </article>
+          <article class="tratamento-destaque">
+            <h3>Porcelanas e estética</h3>
+            <p>
+              Facetas e restaurações em porcelana, planejadas caso a caso para
+              um sorriso harmônico, natural e duradouro.
+            </p>
+          </article>
+          <article class="tratamento-simples">
+            <h3>Prevenção e limpeza</h3>
+            <p>
+              Check-ups e profilaxia para cuidar hoje e evitar tratamentos
+              maiores amanhã.
+            </p>
+          </article>
+          <article class="tratamento-simples">
+            <h3>Clínica geral</h3>
+            <p>
+              Avaliação completa e tratamento das necessidades do dia a dia, com
+              plano individual.
+            </p>
+          </article>
+          <article class="tratamento-simples">
+            <h3>Implantes</h3>
+            <p>
+              Reposição de dentes com planejamento individual, para recuperar
+              função e confiança ao sorrir.
+            </p>
+          </article>
+          <article class="tratamento-simples">
+            <h3>Coroas e próteses</h3>
+            <p>Reabilitação para devolver função e aparência natural.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="clube-luna" id="clube-luna">
+        <!-- Coluna esquerda -->
+        <div class="clube-intro">
+          <h2 class="h2-claro">Clube Luna</h2>
+
+          <h3 class="h3-claro">Um espaço para a mulher que se cuida.</h3>
+
+          <div class="clube-marcas">
+            <img src="/assets/marca1.png" alt="Marca1" />
+            <img src="/assets/marca2.png" alt="Marca2" />
+            <img src="/assets/marca3.png" alt="Marca3" />
+          </div>
+        </div>
+
+        <div class="clube-conteudo">
+          <p class="clube-descricao">
+            Estamos criando experiências que unem saúde e descanso: massoterapia
+            e spa, muay thai no período da noite, encontros e momentos de
+            relaxamento.
+          </p>
+
+          <ul class="clube-lista">
+            <li>Massoterapia e spa</li>
+            <li>Muay thai noturno</li>
+            <li>Encontros e experiências</li>
+          </ul>
+
+          <a
+            href="https://wa.me/5517992361717?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Clube%20Luna."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-claro clube-btn"
+          >
+            Quero saber mais
+          </a>
+        </div>
+      </section>
+
+      <section class="urgencia" id="urgencia">
+        <article class="urgencia-card">
+          <h2>Dor de dente? Atendemos 24 horas.</h2>
+          <p>
+            Para emergências odontológicas, fale com a gente agora pelo
+            WhatsApp.
+          </p>
+          <a
+            class="btn"
+            href="https://wa.me/5517992361717"
+            target="_blank"
+            rel="noopener"
+            >Chamar para urgência</a
+          >
+        </article>
+      </section>
+
+      <section class="contato" id="contato">
+        <h2>Como chegar e falar com a Luna</h2>
+
+        <div class="contato-grade">
+          <article class="card-contato">
+            <h3>Endereço</h3>
+
+            <p>Rua Siqueira Campos, 1738</p>
+            <p>São José do Rio Preto, SP</p>
+
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Rua+Siqueira+Campos+1738+São+José+do+Rio+Preto"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="botao-sublinhado"
+            >
+              Abrir no mapa
+            </a>
+          </article>
+
+          <article class="card-contato">
+            <h3>Recepção</h3>
+
+            <p>Segunda à sexta</p>
+            <p>8h30 às 12h e 14h às 18h30</p>
+
+            <p class="contato-observacao">
+              Atendimentos clínicos com horário marcado, normalmente até as 20h.
+            </p>
+          </article>
+
+          <article class="card-contato">
+            <h3>WhatsApp</h3>
+
+            <p>(17) 99236-1717</p>
+
+            <a
+              href="https://wa.me/5517992361717"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="botao-sublinhado"
+            >
+              Iniciar conversa
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-grade">
+        <div class="footer-sobre">
+          <a class="footer-marca" href="#inicio">
+            <img
+              src="/assets/logo-luna-branca.png"
+              alt="Logo da Luna"
+              style="width: 140px; height: auto"
+            />
+            <small>Clínica de Especialidades</small>
+          </a>
+          <p>
+            Odontologia conservadora e experiências de bem-estar em São José do
+            Rio Preto.
+          </p>
+          <a
+            class="btn btn-claro btn-sm"
+            href="https://wa.me/5517992361717?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20na%20Luna."
+            target="_blank"
+            rel="noopener"
+            >Agendar pelo WhatsApp</a
+          >
+        </div>
+        <nav class="footer-col" aria-label="Rodapé">
+          <h3>Navegue</h3>
+          <ul>
+            <li><a href="#sobre">A Luna</a></li>
+            <li><a href="#tratamentos">Tratamentos</a></li>
+            <li><a href="#clube-luna">Clube Luna</a></li>
+            <li><a href="#urgencia">Urgência</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+        <div class="footer-col">
+          <h3>Visite</h3>
+          <ul>
+            <li>Rua Siqueira Campos, 1738<br />São José do Rio Preto, SP</li>
+            <li>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Rua+Siqueira+Campos+1738+S%C3%A3o+Jos%C3%A9+do+Rio+Preto"
+                target="_blank"
+                rel="noopener"
+                >Abrir no mapa</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Atendimento</h3>
+          <ul>
+            <li>Seg. à sex. · 8h30–12h e 14h–18h30</li>
+            <li>
+              <a
+                href="https://wa.me/5517992361717"
+                target="_blank"
+                rel="noopener"
+                >(17) 99236-1717</a
+              >
+            </li>
+            <li class="footer-24h">Urgências odontológicas 24h</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>© <span id="ano">2026</span> Luna Clínica de Especialidades</p>
+        <a href="#">Voltar ao topo ↑</a>
+      </div>
+    </footer>
+
+    <script>
+      const topo = document.getElementById("topo");
+      const atualizarTopo = () =>
+        topo.classList.toggle("scrolled", window.scrollY > 10);
+      window.addEventListener("scroll", atualizarTopo, { passive: true });
+      atualizarTopo();
+
+      // menu mobile
+      const menuBtn = document.getElementById("menuBtn");
+      const nav = document.getElementById("nav");
+      const definirMenu = (aberto) => {
+        nav.classList.toggle("aberto", aberto);
+        topo.classList.toggle("menu-aberto", aberto);
+        menuBtn.setAttribute("aria-expanded", aberto);
+        menuBtn.setAttribute(
+          "aria-label",
+          aberto ? "Fechar menu" : "Abrir menu",
+        );
+      };
+      menuBtn.addEventListener("click", () =>
+        definirMenu(!nav.classList.contains("aberto")),
+      );
+      nav
+        .querySelectorAll("a")
+        .forEach((link) =>
+          link.addEventListener("click", () => definirMenu(false)),
+        );
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") definirMenu(false);
+      });
+    </script>
+  </body>
 </html>

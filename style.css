@@ -173,63 +173,153 @@ header.scrolled {
   font-weight: 500;
 }
 
-/* ----------- HERO ----------- */
+.btn .icon {
+  font-size: 1.2em;
+  line-height: 1;
+  vertical-align: -0.2em;
+  margin-right: 8px;
+}
+
+/* seção hero */
 .hero {
   position: relative;
   min-height: 100svh;
   display: flex;
   align-items: center;
-  padding: 120px var(--lateral) 80px;
+  padding: 120px var(--lateral) 160px;
   overflow: hidden;
+  box-sizing: border-box;
   background:
     radial-gradient(
-      circle at 75% 50%,
-      rgba(185, 138, 98, 0.16),
-      transparent 42%
+      circle at 75% 45%,
+      rgba(185, 138, 98, 0.18),
+      transparent 45%
     ),
     linear-gradient(160deg, var(--papel) 40%, var(--rosa));
 }
+
+.hero-txt {
+  position: relative;
+  z-index: 2;
+  width: min(580px, 50%);
+}
+
 .olho {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   font-size: 0.8rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--dourado);
-  margin-bottom: 18px;
+  margin: 0 0 18px;
 }
-.lua {
-  position: absolute;
-  right: var(--lateral);
-  top: 50%;
-  width: min(52vw, 560px);
-  aspect-ratio: 1;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background: transparent;
-  box-shadow: inset -42px 18px 0 0 var(--dourado);
-  opacity: 0.85;
-  animation: surgir 1.6s ease-out both;
+.olho::after {
+  content: "";
+  flex: 0 0 180px;
+  height: 1.5px;
+  background: var(--dourado);
 }
-@keyframes surgir {
-  from {
-    opacity: 0;
-    transform: translateY(-46%) rotate(-12deg);
-  }
+
+.hero h1 {
+  margin: 0;
 }
-.hero-txt {
-  position: relative;
-  max-width: 640px;
-}
-.hero-txt p:not(.status, .olho) {
+
+.hero-desc {
   margin: 24px 0 32px;
   max-width: 48ch;
   font-size: 1.15rem;
 }
+
 .acoes {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 24px;
+  gap: 32px;
 }
+
+.acoes .link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.acoes .link i {
+  font-size: 1.15em;
+  transition: transform 0.2s;
+}
+.acoes .link:hover i {
+  transform: translateX(4px);
+}
+
+.hero-visual {
+  position: absolute;
+  z-index: 1;
+  right: calc(var(--lateral) - 60px);
+  bottom: 0;
+  width: min(46vw, 640px);
+  aspect-ratio: 701 / 877;
+  max-height: calc(100% - 90px);
+}
+
+.hero-foto {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom;
+  -webkit-mask-image: linear-gradient(to left, transparent 0%, #000 14%);
+  mask-image: linear-gradient(to left, transparent 0%, #000 14%);
+  animation: foto-surgir 1.2s ease-out both;
+}
+
+.lua {
+  position: absolute;
+  top: -2%;
+  left: -2%;
+  width: 104%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: inset -40px 26px 0 0 #e2c7ab;
+  animation: surgir 1.6s ease-out both;
+}
+
+@keyframes surgir {
+  from {
+    opacity: 0;
+    transform: rotate(-14deg);
+  }
+}
+@keyframes foto-surgir {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+.hero-onda {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: clamp(70px, 10vw, 150px);
+  pointer-events: none;
+}
+.onda-fundo {
+  fill: var(--papel);
+}
+.onda-linha {
+  fill: none;
+  stroke: var(--dourado);
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+}
+
+.hero-seta {
+  display: none;
+}
+
 .status {
   margin-top: 28px;
   font-size: 0.9rem;
@@ -257,10 +347,23 @@ header.scrolled {
   padding: clamp(40px, 6vw, 72px) var(--lateral);
 }
 
+/* Foto da fachada (900x1600): mostra só o recorte x 380–900, y 790–1206,
+   do poste até o letreiro, sem o céu com fios e sem o asfalto. */
 .sobre-imagem {
+  position: relative;
+  width: 500px;
+  max-width: 100%;
+  aspect-ratio: 5 / 4;
+  overflow: hidden;
+  border-radius: 5px;
+
   img {
-    width: 500px;
+    position: absolute;
+    width: 173%; /* 900 / 520 */
+    max-width: none;
     height: auto;
+    left: -73%; /* 380 / 520 */
+    top: -190%; /* 790 / 416 */
   }
 }
 
@@ -319,11 +422,7 @@ header.scrolled {
   grid-template-columns: 1fr 1.2fr;
   gap: clamp(48px, 8vw, 120px);
 
-  background: linear-gradient(
-    115deg,
-    var(--vinho-esc),
-    var(--vinho)
-  );
+  background: linear-gradient(115deg, var(--vinho-esc), var(--vinho));
 
   color: var(--papel);
   padding: clamp(56px, 7vw, 88px) var(--lateral);
@@ -445,7 +544,7 @@ header.scrolled {
 
 .urgencia-card h2 {
   margin: 0;
-  font-size: clamp(1.8rem, 4vw, 2.0rem);
+  font-size: clamp(1.8rem, 4vw, 2rem);
 }
 
 .urgencia-card h2::after {
@@ -533,6 +632,7 @@ header.scrolled {
   padding: clamp(56px, 8vw, 88px) var(--lateral) 28px;
   font-size: 0.95rem;
 }
+
 .footer::before {
   content: "";
   position: absolute;
@@ -545,6 +645,7 @@ header.scrolled {
   opacity: 0.18;
   pointer-events: none;
 }
+
 .footer-grade {
   position: relative;
   display: grid;
@@ -553,6 +654,7 @@ header.scrolled {
   padding-bottom: 48px;
   border-bottom: 1px solid rgba(232, 217, 214, 0.16);
 }
+
 .footer-marca {
   display: inline-flex;
   flex-direction: column;
@@ -564,6 +666,7 @@ header.scrolled {
   color: #fff;
   text-decoration: none;
 }
+
 .footer-marca small {
   font-family: var(--sans);
   font-size: 0.7rem;
@@ -572,11 +675,13 @@ header.scrolled {
   color: var(--dourado);
   margin-top: 6px;
 }
+
 .footer-sobre p {
   max-width: 34ch;
   margin: 18px 0 24px;
   opacity: 0.85;
 }
+
 .footer h3 {
   font-family: var(--sans);
   font-size: 0.75rem;
@@ -586,27 +691,32 @@ header.scrolled {
   color: var(--dourado);
   margin-bottom: 16px;
 }
+
 .footer ul {
   list-style: none;
   padding: 0;
   display: grid;
   gap: 10px;
 }
+
 .footer-col a {
   color: #e8d9d6;
   text-decoration: none;
   transition: color 0.2s;
 }
+
 .footer-col a:hover {
   color: #fff;
   text-decoration: underline;
   text-decoration-color: var(--dourado);
   text-underline-offset: 4px;
 }
+
 .footer-24h {
   color: #fff;
   font-weight: 500;
 }
+
 .footer-24h::before {
   content: "";
   display: inline-block;
@@ -616,6 +726,7 @@ header.scrolled {
   border-radius: 50%;
   background: #3f8a5a;
 }
+
 .footer-base {
   position: relative;
   display: flex;
@@ -627,13 +738,16 @@ header.scrolled {
   font-size: 0.85rem;
   opacity: 0.75;
 }
+
 .footer-base p {
   margin: 0;
 }
+
 .footer-base a {
   color: inherit;
   text-decoration: none;
 }
+
 .footer-base a:hover {
   color: var(--dourado);
 }
